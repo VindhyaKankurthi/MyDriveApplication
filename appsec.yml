@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/MyDrive
+hooks:
+  AfterInstall:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: ec2-user
