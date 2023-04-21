@@ -96,7 +96,7 @@ def upload():
              img.save(filename)
              uploadToS3(filename, bucketname)
         
-    return render_template('fileUploadtoS3.html', message=message)
+    return render_template('fileUploadtoS3.html')
    
 
 #view Files
