@@ -36,5 +36,5 @@ def uploadToS3(filename, bucketname):
                     Filename=filename,
                     Key = filename
                 )
-             return "File uploaded successfully to S3!"
-      
+             
+    

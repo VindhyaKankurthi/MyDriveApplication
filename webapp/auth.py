@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, session
+from flask import Blueprint, render_template, request, session, flash
 
 import time
 import boto3
@@ -95,8 +95,10 @@ def upload():
              print(filename)
              img.save(filename)
              uploadToS3(filename, bucketname)
-        
+             flash('File uploaded successfully!!')
+             #session['messages'] = messages
     return render_template('fileUploadtoS3.html')
+
    
 
 #view Files

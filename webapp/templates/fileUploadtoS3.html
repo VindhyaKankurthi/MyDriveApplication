@@ -18,7 +18,9 @@
             text-align: center;
         }
         
-        
+        .textmsg{
+            text-align:center;
+        }
     </style>
 </head>
 
@@ -36,6 +38,9 @@
             </div>
         </div>
     </nav>
+
+   
+
     <div class="form-group">
         <h2> Upload a file </h2>
         <div class="form-control form-group">
@@ -45,6 +50,16 @@
                 <button type="submit" class="btn btn-primary"> Submit </button>
                 <br><br>
             </form>
+        </div>
+        <br> <br>
+        <div class = "textmsg">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div>{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+     {% endwith %}
         </div>
         <br><br><br>
         <div class="form-control form-control-lg">
