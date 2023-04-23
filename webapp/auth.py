@@ -111,10 +111,3 @@ def viewfile():
         for obj in response['Contents']:
          keys.append(obj['Key'])
     return keys
-
-
-#downloading the files from S3
-@auth.route('/downloadfiles', methods=['GET', 'POST'])
-def downloadfile():
-    
-        return 'download successful!'
